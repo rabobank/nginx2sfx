@@ -9,7 +9,7 @@ It's primary purpose is to run it as a sidecar process in a Cloud Foundry app co
 * NGINX2SFX_URL - The URL where to send the metrics (i.e. https://ingest.eu0.signalfx.com/v2/datapoint)   
 * NGINX2SFX_SKIP_SSL_VALIDATION - Skip the SSL validation when connecting to SignalFx, default is false
 * NGINX2SFX_TOKEN - The SignalFx token to authorize to SignalFx, this value is used in the **X-SF-Token** request header. See below for better security
-* NGINX2SFX_BATCH_SIZE - We do not make an http request to sfx for each nginx logline, especially in high volume logging we batch up log lines and send metrics with one http request, default value is 100  
+* NGINX2SFX_BATCH_SIZE - We do not make an http request to sfx for each nginx log line, especially in high volume logging we batch up log lines and send metrics with one http request, default value is 100  
 * NGINX2SFX_BATCH_INTERVAL - The maximum time to wait before sending the metrics to SignalFx, default value is 5 seconds  
 * NGINX2SFX_URI_AS_DIMENSION - If set to true, the URI will be added as a dimension to the metrics, default is false. (having many different URIs can lead to a lot of dimensions in SignalFx, which will deplete your custom metrics and can be expensive).
 
