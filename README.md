@@ -5,7 +5,7 @@ It's primary purpose is to run it as a sidecar process in a Cloud Foundry app co
 
 ## Environment variables
 * NGINX2SFX_DEBUG - Put nginx2sfx in debug mode
-* NGINX2SFX_INPUTFILE - Name of the file where to read the logs from (default is /tmp/nginx2sfx.log)  
+* NGINX2SFX_INPUTFILE - Name of the file where to read the logs from (default is logs/nginx2sfx.log)  
 * NGINX2SFX_URL - The URL where to send the metrics (i.e. https://ingest.eu0.signalfx.com/v2/datapoint)   
 * NGINX2SFX_SKIP_SSL_VALIDATION - Skip the SSL validation when connecting to SignalFx, default is false
 * NGINX2SFX_TOKEN - The SignalFx token to authorize to SignalFx, this value is used in the **X-SF-Token** request header. See below for better security

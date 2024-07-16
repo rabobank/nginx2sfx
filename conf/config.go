@@ -30,7 +30,7 @@ var (
 	CfInstanceIndex      string
 )
 
-const SfxTimeout = 2
+const SfxTimeout = 3
 
 func EnvironmentComplete() {
 	envComplete := true
@@ -39,7 +39,7 @@ func EnvironmentComplete() {
 		Debug = true
 	}
 	if InputFile == "" {
-		InputFile = "/tmp/nginx2sfx.log"
+		InputFile = "logs/nginx2sfx.log"
 	}
 	if SfxUrl == "" {
 		envComplete = false
