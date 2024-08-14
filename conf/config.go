@@ -83,6 +83,7 @@ func EnvironmentComplete() {
 	}
 
 	// try to get the SfxToken from credhub
+	TokenInCredhub := false
 	vcapServicesString := os.Getenv("VCAP_SERVICES")
 	if vcapServicesString != "" {
 		vcapServices := model.VcapServices{}
@@ -94,11 +95,13 @@ func EnvironmentComplete() {
 					SfxToken = service.Credentials.Token
 					if Debug {
 						fmt.Println("got SfxToken from credhub")
+						TokenInCredhub = true
 					}
 				}
 			}
 		}
-	} else {
+	}
+	if !TokenInCredhub {
 		if SfxToken == "" {
 			envComplete = false
 			fmt.Println("missing envvar: NGINX2SFX_TOKEN, and also no \"sfxtoken \" credhub service instance bound")
