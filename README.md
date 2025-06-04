@@ -1,6 +1,6 @@
 ### nginx2sfx, read (json) logs from ngins, and send metrics to SignalFx
 
-This cmdline utility reads a json-bases ngins logfile, extracts metrics (requests, response-time, status-code...) from it and sends those as metrics to SignalFx.  
+This cmdline utility reads a json-bases nginx logfile, extracts metrics (requests, response-time, status-code...) from it and sends those as metrics to SignalFx.  
 It's primary purpose is to run it as a sidecar process in a Cloud Foundry app container, so we are able to monitor nginx using SignalFx.
 
 ## Environment variables
