@@ -28,7 +28,7 @@ jobs:
           COMMIT: ${{ github.sha }}
         run: .github/scripts/build.sh
       - name: upload nginx2sfx
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: dist
           path: dist/
@@ -47,7 +47,7 @@ jobs:
         run: |
           echo VERSION=$(~/go/bin/versioning bump_patch) >> ${GITHUB_ENV}
       - name: Download Artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: dist
           path: dist
